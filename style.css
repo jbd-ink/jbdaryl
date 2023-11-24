@@ -217,7 +217,7 @@ a{
       color: rgb(11, 11, 153);
     }
 
-  .instagram{
+  .github{
     color: rgb(233, 12, 12);
   }  
 
@@ -372,19 +372,24 @@ a{
   padding-top: 3rem;
 }
 
-.about__intro{
 
+.about__intro{
   font-size: 2rem;
-  font-weight: 700
+  font-weight: 700;
+  margin-bottom: 3rem;
 }
-.about__text {
-  margin:2rem 35rem;
+
+.about__text{
+  padding: 0 30rem 0 30rem;
+  margin-bottom: 10rem;
   font-weight: 400;
-  margin-bottom: 6rem;
 }
+
 @media screen and (max-width:768px) {
-  .about__text{
-    margin: 0 3rem;
+  .about__text{ 
+   margin: 0 auto;
+   padding-left: 3rem;
+   padding-right: 3rem;
   }
 }
 
@@ -424,6 +429,12 @@ background-image: url("ata:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
   text-align: center;
   margin-bottom: 7rem;
 }
+@media screen and (max-width:768px) {
+  .skills__text{
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+}
 
 .legends{
   padding: 3rem;
@@ -431,16 +442,13 @@ background-image: url("ata:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
     flex-direction: row;
 }
 
-@media screen and (min-width:768px) {
+
+@media screen and (max-width:768px) {
   .legends{
     padding-top: 3rem;
       display: inherit;
       flex-direction: column;
       gap: 2rem;
-  }
-
-  .skill__text {
-    margin: 0 3rem 0 3rem;
   }
 }
 
@@ -502,15 +510,37 @@ i{
   font-size: 8rem;
 }
 
+.legend{
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width:768px) {
+  .legend{
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 .skills--wrapper{
-  padding-right: 4rem;
-  margin-right:3rem;
+  padding: 2rem;
   border-right: 0.1px solid #ced4da ;
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
+}
 
+.skills--wrapper:nth-child(4){
+  border: none;
+}
+
+@media screen and (max-width:768px){
+  .skills--wrapper{
+    border: none;
+    margin: 2rem 0 2rem 0;
+
+  }
 }
 .language__icons{
   font-size: 6rem;
@@ -533,7 +563,7 @@ i{
 }
 
 .github{
-  color: lightgray;
+  color: #000000;
 }
 
 .angular{
@@ -547,22 +577,8 @@ i{
 .node{
   color: lightgray;
 }
-.legend{
-  display: flex;
-}
 
-@media screen and(max-width:768px) {
-  .legend{
-    margin-top: 6rem;
-    gap: 2rem;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-    display: grid;
-    grid-template: repeat(2,1fr) / repeat(2,1fr);
-    row-gap: 4rem;
-  }
-}
+
 
 .skills__tittle{
   text-align: center;
@@ -864,6 +880,7 @@ background: #0dc990;
   margin-top: 2rem;
   border-radius: 40px;
   border: 1px solid  #0dc990 ;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='452' height='54.2' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23333366' stroke-width='1.5' stroke-opacity='0.31'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E")
  }
 
  .btn__callout:hover{
@@ -922,8 +939,6 @@ background: #0dc990;
  .mantra{
   font-weight: 400;
  }
-
- /* Footer */
  footer{
   padding-top: 20rem;
   background-color:black;
@@ -956,6 +971,7 @@ background: #0dc990;
  }
  
  .rouded-button{
+  color:#ced4da;
   margin-right: 1rem;
   height: 60px;
   width: 60px;
@@ -964,12 +980,10 @@ background: #0dc990;
   justify-content: center;
   border-radius: 50%;
   border: 1px solid #0dc990;
-  color: #0dc990
  }
 
  .rouded-button:hover{
   background-color: #0dc990;
-  color: #000000;
  }
 
  .mantra{
@@ -1018,7 +1032,6 @@ background: #0dc990;
  }
 
  .contact__formpt1{
-  margin: 0 40rem 0 40rem;
   justify-content: center;
   gap: 1rem;
   display: flex;
